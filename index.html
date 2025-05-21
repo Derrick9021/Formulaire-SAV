@@ -2,16 +2,16 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Merci pour votre retour</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire SAV Moto Électrique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Roboto', sans-serif;
       background-color: #f7f9fc;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
       margin: 0;
+      padding: 2rem;
+      color: #333;
     }
     .container {
       max-width: 800px;
@@ -22,35 +22,25 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .message {
-      background-color: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-    .message h1 {
-      color: #2c3e50;
-      font-size: 2em;
-    }
-    .message p {
-      color: #555;
-      margin: 20px 0;
-      font-size: 1.1em;
-    }
-    .message a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 20px;
-      text-decoration: none;
-      background-color: #27ae60;
-      color: white;
+    .avis {
+      margin-bottom: 30px;
+      }
+
+    .avis label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      }
+
+    .avis select, .section textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
       border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-    .message a:hover {
-      background-color: #219150;
-    }
+      font-size: 16px;
+       }
+
     header {
       display: flex;
       justify-content: space-between;
@@ -60,6 +50,95 @@
     header img {
       width: 100px;
     }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    fieldset {
+      border: none;
+      margin-bottom: 1.5rem;
+    }
+    legend {
+      font-weight: bold;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .checkbox-group label {
+      display: block;
+      margin: 0.5rem 0;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+
+     .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 2em;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+
+    .rating label:before {
+      content: '★';
+    }
+
+    .note-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
   </style>
 </head>
 <body>
@@ -68,10 +147,167 @@
       <img src="EHUGAUCHE.png" alt="EHUGAUCHE">
       <img src="EHUDROIT.png" alt="EHUDROIT">
     </header>
-  <div class="message">
-    <h1>🙏 Merci pour votre message !</h1>
-    <p>Nous avons bien reçu votre retour. Un membre de notre équipe vous contactera si nécessaire.</p>
-    <a href="https://derrick9021.github.io/Formulaire-SAV/">← Retour à l'accueil</a>
+
+    <h1>FORMULAIRE DE RETOUR SAV / EHUMOTORS</h1>
+    <p style="text-align: center;">Merci de remplir ce formulaire avec précision afin que nous puissions mieux appréhender vos préoccupations dans les meilleurs délais.</p>
+
+    <form action="https://formsubmit.co/fiacrehoundagnon221@gmail.com" method="POST" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Informations générales</legend>
+        <label>Nom et prénom du client :</label>
+        <input type="text" name="nom_prenom" required>
+
+        <label>Numéro de téléphone :</label>
+        <input type="text" name="telephone" required>
+
+        <label>Adresse e-mail (facultatif) :</label>
+        <input type="email" name="email">
+
+        <label>Nom de la moto :</label>
+        <select name="marque_moto" required>
+          <option value="">-- Choisissez la marque --</option>
+          <option value="EHU ELEGANCE">EHU ELEGANCE</option>
+          <option value="EHU DYNASTI">EHU DYNASTI</option>
+          <option value="EHU FINESSE">EHU FINESSE</option>
+          <option value="EHU CITADINE">EHU CITADINE</option>
+          <option value="EHU DJABI">EHU DJABI</option>
+          <option value="EHU SPORT">EHU SPORT</option>
+        </select>
+
+        <label>Numéro de châssis :</label>
+        <input type="text" name="numero_chassis" required>
+
+        <label>Date d’achat de la moto :</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="date_achat" value="<3 mois">Moins de 3 mois</label>
+          <label><input type="checkbox" name="date_achat" value="3-6 mois">Entre 3 et 6 mois</label>
+          <label><input type="checkbox" name="date_achat" value="6-12 mois">Entre 6 et 12 mois</label>
+          <label><input type="checkbox" name="date_achat" value=">12 mois">Plus de 12 mois</label>
+        </div>
+
+        <label>Kilométrage actuel de la moto :</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="kilometrage" value="<1000 km">Moins de 1000 km</label>
+          <label><input type="checkbox" name="kilometrage" value="1000-3000 km">Entre 1000 et 3000 km</label>
+          <label><input type="checkbox" name="kilometrage" value=">3000 km">Plus de 3000 km</label>
+        </div>
+
+        <label>Utilisez-vous la moto quotidiennement ?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="usage" value="Oui">Oui</label>
+          <label><input type="checkbox" name="usage" value="Non">Non</label>
+          <label><input type="checkbox" name="usage" value="Occasionnellement">Occasionnellement</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>⚠️ Nature du problème rencontré</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="problemes[]" value="batterie">Problème de batterie</label>
+          <label><input type="checkbox" name="problemes[]" value="moteur">Problème de moteur</label>
+          <label><input type="checkbox" name="problemes[]" value="freinage">Problème de freinage</label>
+          <label><input type="checkbox" name="problemes[]" value="panne">Panne électrique générale</label>
+          <label><input type="checkbox" name="problemes[]" value="affichage">Affichage ou compteur défectueux</label>
+          <label><input type="checkbox" name="problemes[]" value="chargeur">Problème avec le chargeur</label>
+          <label><input type="checkbox" name="problemes[]" value="structure">Problème de coque ou structure</label>
+          <label><input type="checkbox" name="problemes[]" value="structure">Aucun problème</label>
+          <label>Autre : <input type="text" name="probleme_autre"></label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contexte d’apparition du problème</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="moment" value="livraison">Dès la livraison</label>
+          <label><input type="checkbox" name="moment" value="quelques jours">Après quelques jours</label>
+          <label><input type="checkbox" name="moment" value="longue période">Après une longue période</label>
+          <label><input type="checkbox" name="moment" value="progressivement">Progressivement</label>
+        </div>
+
+        <label>Avez-vous déjà fait réparer la moto ailleurs ?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="reparation_exterieure" value="Oui">Oui</label>
+          <label><input type="checkbox" name="reparation_exterieure" value="Non">Non</label>
+        </div>
+
+        <label>Le problème survient-il :</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="frequence" value="tout le temps">Tout le temps</label>
+          <label><input type="checkbox" name="frequence" value="intermittence">Par intermittence</label>
+          <label><input type="checkbox" name="frequence" value="longs trajets">Lors de longs trajets</label>
+          <label><input type="checkbox" name="frequence" value="après recharge">Après recharge</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend> Interventions précédentes</legend>
+        <label>Avez-vous déjà contacté notre service technique ?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="contact_service" value="Oui">Oui</label>
+          <label><input type="checkbox" name="contact_service" value="Non">Non</label>
+        </div>
+
+        <label>La moto a-t-elle été réparée dans notre structure ?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="repare_structure" value="Oui">Oui</label>
+          <label><input type="checkbox" name="repare_structure" value="Non">Non</label>
+          <label><input type="checkbox" name="repare_structure" value="Ne sais pas">Ne sais pas</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Type de demande</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="demande" value="Reparation">Réparation de la moto</label>
+          <label><input type="checkbox" name="demande" value="Echange complet">Échange complet de la moto</label>
+          <label><input type="checkbox" name="demande" value="Batterie">Échange de la batterie</label>
+          <label><input type="checkbox" name="demande" value="Composant">Échange d’un autre composant</label>
+          <label><input type="checkbox" name="demande" value="Diagnostic">Simple diagnostic / vérification</label>
+        </div>
+      </fieldset>
+
+
+      <div class="note-container">
+    <h3>Laissez une note sur votre expérience avec EHUMOTORS :</h3>
+
+    <div class="rating">
+      <input type="radio" name="note" id="star5" value="5">
+      <label for="star5" title="Excellent"></label>
+
+      <input type="radio" name="note" id="star4" value="4">
+      <label for="star4" title="Très bon"></label>
+
+      <input type="radio" name="note" id="star3" value="3">
+      <label for="star3" title="Bon"></label>
+
+      <input type="radio" name="note" id="star2" value="2">
+      <label for="star2" title="Passable"></label>
+
+      <input type="radio" name="note" id="star1" value="1">
+      <label for="star1" title="Mauvais"></label>
+    </div>
+    <label for="avis">Laissez votre avis (facultatif) :</label>
+    <textarea name="avis" rows="4" placeholder="Exprimez librement votre ressenti sur la moto MOTORS..."></textarea>
+  </div> 
+      <fieldset>
+        <legend>Déclaration</legend>
+        <label><input type="checkbox" name="certifie" required>Je certifie que les informations fournies sont exactes.</label>
+        <label><input type="checkbox" name="compris">Je comprends que toute intervention extérieure peut annuler la garantie.</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>📎 Pièces jointes</legend>
+        <label>Copie de la facture d’achat :</label>
+        <input type="file" name="facture">
+
+        <label>Photo de la moto / composant :</label>
+        <input type="file" name="photo">
+      </fieldset>
+
+      <input type="hidden" name="_next" value="https://derrick9021.github.io/remerciement/">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Envoyer</button>
+    </form>
   </div>
 </body>
 </html>
