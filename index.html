@@ -96,6 +96,49 @@
     button:hover {
       background-color: #0056b3;
     }
+
+     .rating {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .rating input {
+      display: none;
+    }
+
+    .rating label {
+      font-size: 2em;
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .rating input:checked ~ label,
+    .rating label:hover,
+    .rating label:hover ~ label {
+      color: gold;
+    }
+
+    .rating label:before {
+      content: '★';
+    }
+
+    .note-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+    }
+
   </style>
 </head>
 <body>
@@ -106,7 +149,7 @@
     </header>
 
     <h1>FORMULAIRE DE RETOUR SAV / EHUMOTORS</h1>
-    <p>Merci de remplir ce formulaire avec précision afin que nous puissions mieux appréhender vos préoccupations dans les meilleurs délais.</p>
+    <p style="text-align: center;">Merci de remplir ce formulaire avec précision afin que nous puissions mieux appréhender vos préoccupations dans les meilleurs délais.</p>
 
     <form action="https://formsubmit.co/fiacrehoundagnon221@gmail.com" method="POST" enctype="multipart/form-data">
       <fieldset>
@@ -223,23 +266,29 @@
         </div>
       </fieldset>
 
-      <div class="avis">
-        <h3>Avis sur les motos EHUMOTORS</h3>
-  
-         <label for="note">Note générale sur les motos EHUMOTORS :</label>
-         <select id="note" name="note" required>
-         <option value="">Sélectionner une note</option>
-         <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
-         <option value="4">⭐⭐⭐⭐ - Très bon</option>
-         <option value="3">⭐⭐⭐ - Bon</option>
-         <option value="2">⭐⭐ - Passable</option>
-         <option value="1">⭐ - Mauvais</option>
-        </select>
 
-  <label for="avis">Laissez votre avis (facultatif) :</label>
-  <textarea id="avis" name="avis" rows="4" placeholder="Exprimez librement votre ressenti sur la moto EHUMOTORS..."></textarea>
-</div>
+      <div class="note-container">
+    <h3>Laissez une note sur votre expérience avec EHUMOTORS :</h3>
 
+    <div class="rating">
+      <input type="radio" name="note" id="star5" value="5">
+      <label for="star5" title="Excellent"></label>
+
+      <input type="radio" name="note" id="star4" value="4">
+      <label for="star4" title="Très bon"></label>
+
+      <input type="radio" name="note" id="star3" value="3">
+      <label for="star3" title="Bon"></label>
+
+      <input type="radio" name="note" id="star2" value="2">
+      <label for="star2" title="Passable"></label>
+
+      <input type="radio" name="note" id="star1" value="1">
+      <label for="star1" title="Mauvais"></label>
+    </div>
+    <label for="avis">Laissez votre avis (facultatif) :</label>
+    <textarea name="avis" rows="4" placeholder="Exprimez librement votre ressenti sur la moto MOTORS..."></textarea>
+  </div> 
       <fieldset>
         <legend>Déclaration</legend>
         <label><input type="checkbox" name="certifie" required>Je certifie que les informations fournies sont exactes.</label>
