@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de SAV Moto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .logos img {
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <form action="https://formsubmit.co/fiacrehoundagnon221@gmail.com" method="POST">
+    <!-- Config hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+
+    <div class="logos">
+      <img src="logo1.png" alt="Logo gauche">
+      <img src="logo2.png" alt="Logo droit">
+    </div>
+
+    <h2>🔧 FORMULAIRE DE DEMANDE DE SAV / ÉCHANGE – MOTO ÉLECTRIQUE</h2>
+
+    <label>Nom et prénom du client :</label>
+    <input type="text" name="nom_prenom" required>
+
+    <label>Numéro de téléphone :</label>
+    <input type="tel" name="telephone" required>
+
+    <label>Adresse e-mail :</label>
+    <input type="email" name="email">
+
+    <label>Marque de la moto :</label>
+    <select name="marque_moto" required>
+      <option value="Haojue">Haojue</option>
+      <option value="Math">Math</option>
+      <option value="Soso">Soso</option>
+    </select>
+
+    <label>Numéro de châssis :</label>
+    <input type="text" name="numero_chassis">
+
+    <label>Date d’achat de la moto :</label>
+    <select name="date_achat">
+      <option value="moins_3_mois">Moins de 3 mois</option>
+      <option value="3_6_mois">Entre 3 et 6 mois</option>
+      <option value="6_12_mois">Entre 6 et 12 mois</option>
+      <option value="plus_12_mois">Plus de 12 mois</option>
+    </select>
+
+    <label>Kilométrage actuel de la moto :</label>
+    <select name="kilometrage">
+      <option value="moins_1000">Moins de 1000 km</option>
+      <option value="1000_3000">Entre 1000 et 3000 km</option>
+      <option value="plus_3000">Plus de 3000 km</option>
+    </select>
+
+    <label>Utilisez-vous la moto quotidiennement ?</label>
+    <select name="utilisation">
+      <option value="oui">Oui</option>
+      <option value="non">Non</option>
+      <option value="occasionnellement">Occasionnellement</option>
+    </select>
+
+    <label>Nature du problème rencontré :</label>
+    <textarea name="probleme"></textarea>
+
+    <label>Contexte d’apparition du problème :</label>
+    <textarea name="contexte"></textarea>
+
+    <label>Avez-vous déjà fait réparer la moto ailleurs ?</label>
+    <select name="reparation_ailleurs">
+      <option value="oui">Oui</option>
+      <option value="non">Non</option>
+    </select>
+
+    <label>Le problème survient-il :</label>
+    <textarea name="frequence_probleme"></textarea>
+
+    <label>Interventions précédentes :</label>
+    <textarea name="interventions"></textarea>
+
+    <label>Que souhaitez-vous ?</label>
+    <textarea name="type_demande"></textarea>
+
+    <label>Commentaires supplémentaires :</label>
+    <textarea name="commentaires"></textarea>
+
+    <label>
+      <input type="checkbox" name="certification" required>
+      Je certifie que les informations fournies sont exactes.
+    </label>
+
+    <label>
+      <input type="checkbox" name="garantie" required>
+      Je comprends que toute intervention en dehors de la structure peut entraîner la perte de garantie.
+    </label>
+
+    <p><strong>📌 À joindre avec le formulaire :</strong><br>
+    Une copie de la facture d’achat, une photo de la moto et du composant concerné (si possible)</p>
+
+    <button type="submit">Envoyer</button>
+  </form>
+</body>
+</html>
