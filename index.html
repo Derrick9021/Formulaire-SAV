@@ -85,16 +85,25 @@
       margin: 0.5rem 0;
     }
     button {
-      background-color: #007BFF;
+      background-color: #219150;
       color: white;
-      padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
       font-size: 1rem;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #27ae60;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      align-items: center;
     }
     button:hover {
-      background-color: #0056b3;
+      background-color: #219150;
     }
 
      .rating {
@@ -288,7 +297,7 @@
     </div>
     <label for="avis">Laissez votre avis (facultatif) :</label>
     <textarea name="avis" rows="4" placeholder="Exprimez librement votre ressenti sur la moto MOTORS..."></textarea>
-  </div> 
+   </div> 
       <fieldset>
         <legend>Déclaration</legend>
         <label><input type="checkbox" name="certifie" required>Je certifie que les informations fournies sont exactes.</label>
@@ -303,10 +312,11 @@
         <label>Photo de la moto / composant :</label>
         <input type="file" name="photo">
       </fieldset>
-
+      <div style="text-align: right;">
       <input type="hidden" name="_next" value="https://derrick9021.github.io/remerciement/">
       <input type="hidden" name="_captcha" value="false">
       <button type="submit">Envoyer</button>
+      </div>
     </form>
   </div>
 </body>
