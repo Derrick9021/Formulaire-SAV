@@ -1,153 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire de SAV Moto</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
-    }
-    form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      max-width: 700px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      margin-top: 20px;
-      background-color: #28a745;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    .logos {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .logos img {
-      height: 80px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire de Retour SAV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <form action="https://formsubmit.co/abcf10a3e3144b25f3adcbf63c335fa2" method="POST">
-    <!-- Config hidden fields -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
-
-    <div class="logos">
-      <img src="logo1.png" alt="Logo gauche">
-      <img src="logo2.png" alt="Logo droit">
+<body class="bg-gray-100 py-10">
+  <div class="max-w-4xl mx-auto bg-white shadow-xl p-8 rounded-lg">
+    <div class="flex justify-between items-center mb-8">
+      <img src="EHUGAUCHE.png" alt="Logo gauche" class="w-32 h-auto">
+      <h1 class="text-xl font-bold text-center flex-1">FORMULAIRE DE DEMANDE DE SAV / ÉCHANGE – MOTO ÉLECTRIQUE</h1>
+      <img src="EHUDROIT.png" alt="Logo droit" class="w-32 h-auto">
     </div>
 
-    <h2>🔧 FORMULAIRE DE DEMANDE DE SAV / ÉCHANGE – MOTO ÉLECTRIQUE</h2>
+    <p class="mb-6">Merci de remplir ce formulaire avec précision afin que nous puissions traiter votre demande dans les meilleurs délais.</p>
 
-    <label>Nom et prénom du client :</label>
-    <input type="text" name="nom_prenom" required>
+    <form action="mailto:fiacrehoundagnon221@gmail.com" method="POST" enctype="text/plain" class="space-y-6">
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">Informations générales</legend>
+        <div class="grid grid-cols-2 gap-4 mt-4">
+          <input type="text" name="nom" placeholder="Nom et prénom du client" class="border p-2 rounded" required>
+          <input type="tel" name="telephone" placeholder="Numéro de téléphone" class="border p-2 rounded" required>
+          <input type="email" name="email" placeholder="Adresse e-mail (facultatif)" class="border p-2 rounded">
+          <select name="marque_moto" class="border p-2 rounded">
+            <option value="">Sélectionner la marque de la moto</option>
+            <option value="EHU DYNASTIE">EHU DYNASTIE</option>
+            <option value="EHU FINESSE">EHU FINESSE</option>
+            <option value="EHU DJABI">EHU DJABI</option>
+            <option value="EHU ELEGANCE">EHU ELEGANCE</option>
+            <option value="EHU CITADINE">EHU CITADINE</option>
+            <option value="EHU SPORT">EHU SPORT</option>
+          </select>
+          <input type="text" name="numero_chassis" placeholder="Numéro de châssis" class="border p-2 rounded">
+        </div>
 
-    <label>Numéro de téléphone :</label>
-    <input type="tel" name="telephone" required>
+        <div class="mt-4">
+          <label class="block font-semibold">Date d’achat de la moto :</label>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <label><input type="radio" name="date_achat" value="moins_3_mois"> Moins de 3 mois</label>
+            <label><input type="radio" name="date_achat" value="3_6_mois"> Entre 3 et 6 mois</label>
+            <label><input type="radio" name="date_achat" value="6_12_mois"> Entre 6 et 12 mois</label>
+            <label><input type="radio" name="date_achat" value="plus_12_mois"> Plus de 12 mois</label>
+          </div>
+        </div>
 
-    <label>Adresse e-mail :</label>
-    <input type="email" name="email">
+        <div class="mt-4">
+          <label class="block font-semibold">Kilométrage actuel :</label>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <label><input type="radio" name="kilometrage" value="moins_1000"> Moins de 1000 km</label>
+            <label><input type="radio" name="kilometrage" value="1000_3000"> Entre 1000 et 3000 km</label>
+            <label><input type="radio" name="kilometrage" value="plus_3000"> Plus de 3000 km</label>
+          </div>
+        </div>
 
-    <label>Marque de la moto :</label>
-    <select name="marque_moto" required>
-      <option value="Haojue">Haojue</option>
-      <option value="Math">Math</option>
-      <option value="Soso">Soso</option>
-    </select>
+        <div class="mt-4">
+          <label class="block font-semibold">Utilisez-vous la moto quotidiennement ?</label>
+          <div class="flex flex-wrap gap-4 mt-2">
+            <label><input type="radio" name="utilisation" value="oui"> Oui</label>
+            <label><input type="radio" name="utilisation" value="non"> Non</label>
+            <label><input type="radio" name="utilisation" value="occasionnellement"> Occasionnellement</label>
+          </div>
+        </div>
+      </fieldset>
 
-    <label>Numéro de châssis :</label>
-    <input type="text" name="numero_chassis">
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">⚠️ Nature du problème rencontré</legend>
+        <label class="block mb-2">Quel(s) type(s) de problème rencontrez-vous ?</label>
+        <div class="grid grid-cols-2 gap-2">
+          <label><input type="checkbox" name="probleme[]" value="batterie"> Problème de batterie</label>
+          <label><input type="checkbox" name="probleme[]" value="moteur"> Problème de moteur</label>
+          <label><input type="checkbox" name="probleme[]" value="freinage"> Problème de freinage</label>
+          <label><input type="checkbox" name="probleme[]" value="panne_electrique"> Panne électrique</label>
+          <label><input type="checkbox" name="probleme[]" value="compteur"> Compteur défectueux</label>
+          <label><input type="checkbox" name="probleme[]" value="chargeur"> Problème avec le chargeur</label>
+          <label><input type="checkbox" name="probleme[]" value="coque"> Problème de coque / structure</label>
+          <label class="col-span-2">
+            Autre (précisez) : <input type="text" name="probleme_autre" class="border p-1 rounded w-full">
+          </label>
+        </div>
+      </fieldset>
 
-    <label>Date d’achat de la moto :</label>
-    <select name="date_achat">
-      <option value="moins_3_mois">Moins de 3 mois</option>
-      <option value="3_6_mois">Entre 3 et 6 mois</option>
-      <option value="6_12_mois">Entre 6 et 12 mois</option>
-      <option value="plus_12_mois">Plus de 12 mois</option>
-    </select>
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">🧪 Contexte d’apparition du problème</legend>
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block mb-1">Quand le problème est-il survenu ?</label>
+            <select name="moment_apparition" class="border p-2 rounded w-full">
+              <option value="livraison">Dès la livraison</option>
+              <option value="quelques_jours">Après quelques jours</option>
+              <option value="longue_utilisation">Après longue utilisation</option>
+              <option value="progressif">Progressivement</option>
+            </select>
+          </div>
 
-    <label>Kilométrage actuel de la moto :</label>
-    <select name="kilometrage">
-      <option value="moins_1000">Moins de 1000 km</option>
-      <option value="1000_3000">Entre 1000 et 3000 km</option>
-      <option value="plus_3000">Plus de 3000 km</option>
-    </select>
+          <div>
+            <label class="block mb-1">Avez-vous déjà fait réparer la moto ailleurs ?</label>
+            <select name="reparation_externe" class="border p-2 rounded w-full">
+              <option value="non">Non</option>
+              <option value="oui">Oui</option>
+            </select>
+          </div>
 
-    <label>Utilisez-vous la moto quotidiennement ?</label>
-    <select name="utilisation">
-      <option value="oui">Oui</option>
-      <option value="non">Non</option>
-      <option value="occasionnellement">Occasionnellement</option>
-    </select>
+          <div>
+            <label class="block mb-1">Le problème survient-il :</label>
+            <select name="frequence_probleme" class="border p-2 rounded w-full">
+              <option value="toujours">Tout le temps</option>
+              <option value="intermittent">Par intermittence</option>
+              <option value="longs_trajets">Lors de longs trajets</option>
+              <option value="apres_recharge">Après recharge</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
 
-    <label>Nature du problème rencontré :</label>
-    <textarea name="probleme"></textarea>
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">Interventions précédentes</legend>
+        <div class="flex flex-wrap gap-4">
+          <label><input type="radio" name="contact_technique" value="oui"> Avez-vous contacté notre service technique ? Oui</label>
+          <label><input type="radio" name="contact_technique" value="non"> Non</label>
+          <label><input type="radio" name="inspection" value="oui"> Moto déjà inspectée chez nous ? Oui</label>
+          <label><input type="radio" name="inspection" value="non"> Non</label>
+          <label><input type="radio" name="inspection" value="ne_sais_pas"> Ne sais pas</label>
+        </div>
+      </fieldset>
 
-    <label>Contexte d’apparition du problème :</label>
-    <textarea name="contexte"></textarea>
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">Type de demande</legend>
+        <div class="grid grid-cols-2 gap-2">
+          <label><input type="radio" name="demande" value="reparation"> Réparation de la moto</label>
+          <label><input type="radio" name="demande" value="echange"> Échange complet</label>
+          <label><input type="radio" name="demande" value="batterie"> Échange de la batterie</label>
+          <label><input type="radio" name="demande" value="composant"> Échange d’un composant</label>
+          <label><input type="radio" name="demande" value="diagnostic"> Simple diagnostic</label>
+        </div>
+      </fieldset>
 
-    <label>Avez-vous déjà fait réparer la moto ailleurs ?</label>
-    <select name="reparation_ailleurs">
-      <option value="oui">Oui</option>
-      <option value="non">Non</option>
-    </select>
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">📝 Commentaires supplémentaires</legend>
+        <textarea name="commentaires" rows="4" class="border p-2 rounded w-full"></textarea>
+      </fieldset>
 
-    <label>Le problème survient-il :</label>
-    <textarea name="frequence_probleme"></textarea>
+      <fieldset class="border p-4 rounded">
+        <legend class="font-semibold">✅ Déclaration</legend>
+        <label><input type="checkbox" name="certifie"> Je certifie que les informations fournies sont exactes.</label><br>
+        <label><input type="checkbox" name="compris"> Je comprends que toute intervention en dehors de la structure peut entraîner la perte de garantie.</label>
+      </fieldset>
 
-    <label>Interventions précédentes :</label>
-    <textarea name="interventions"></textarea>
+      <div class="text-sm text-gray-600 mt-6">
+        📌 À joindre avec le formulaire :<br>
+        - Une copie de la facture d’achat<br>
+        - Une photo de la moto et du composant concerné (si possible)<br><br>
+        ⚠️ Attention : Le non-respect des conditions d’usage peut entraîner le refus de la garantie.
+      </div>
 
-    <label>Que souhaitez-vous ?</label>
-    <textarea name="type_demande"></textarea>
-
-    <label>Commentaires supplémentaires :</label>
-    <textarea name="commentaires"></textarea>
-
-    <label>
-      <input type="checkbox" name="certification" required>
-      Je certifie que les informations fournies sont exactes.
-    </label>
-
-    <label>
-      <input type="checkbox" name="garantie" required>
-      Je comprends que toute intervention en dehors de la structure peut entraîner la perte de garantie.
-    </label>
-
-    <p><strong>📌 À joindre avec le formulaire :</strong><br>
-    Une copie de la facture d’achat, une photo de la moto et du composant concerné (si possible)</p>
-
-    <button type="submit">Envoyer</button>
-  </form>
+      <div class="mt-6">
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Envoyer</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
