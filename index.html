@@ -183,7 +183,7 @@
           <option value="EHU SPORT">EHU SPORT</option>
         </select>
 
-        <label>Numéro de châssis :</label>
+        <label>Numéro de châssis/Immatriculation :</label>
         <input type="text" name="numero_chassis" required>
 
         <label>Date d’achat de la moto :</label>
@@ -220,7 +220,7 @@
           <label><input type="checkbox" name="problemes[]" value="chargeur">Problème avec le chargeur</label>
           <label><input type="checkbox" name="problemes[]" value="structure">Problème de coque ou structure</label>
           <label><input type="checkbox" name="problemes[]" value="structure">Aucun problème</label>
-          <label>Autre : <input type="text" name="probleme_autre"></label>
+          <label>Description de la panne : <input type="text" name="probleme_autre"></label>
         </div>
       </fieldset>
 
@@ -279,7 +279,7 @@
       <div class="note-container">
     <h3>Laissez une note sur votre expérience avec EHUMOTORS :</h3>
 
-    <div class="rating">
+    <div class="rating" required>
       <input type="radio" name="note" id="star5" value="5">
       <label for="star5" title="Excellent"></label>
 
@@ -304,14 +304,14 @@
         <label><input type="checkbox" name="compris">Je comprends que toute intervention extérieure peut annuler la garantie.</label>
       </fieldset>
 
-      <fieldset>
+      <!-- <fieldset>
         <legend>📎 Pièces jointes</legend>
         <label>Copie de la facture d’achat :</label>
         <input type="file" name="facture">
 
         <label>Photo de la moto / composant :</label>
         <input type="file" name="photo">
-      </fieldset>
+      </fieldset> -->
       <div style="text-align: right;">
       <input type="hidden" name="_next" value="https://derrick9021.github.io/remerciement/">
       <input type="hidden" name="_captcha" value="false">
