@@ -133,6 +133,11 @@
     .rating label:before {
       content: '★';
     }
+    .justifie {
+      text-align: justify;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
 
     .note-container {
       text-align: center;
@@ -172,7 +177,7 @@
         <label>Adresse e-mail (facultatif) :</label>
         <input type="email" name="email">
 
-        <label>Nom de la moto :</label>
+        <label>Model de la moto :</label>
         <select name="marque_moto" required>
           <option value="">-- Choisissez la marque --</option>
           <option value="EHU ELEGANCE">EHU ELEGANCE</option>
@@ -212,14 +217,14 @@
       <fieldset>
         <legend>⚠️ Nature du problème rencontré</legend>
         <div class="checkbox-group">
-          <label><input type="checkbox" name="problemes[]" value="batterie">Problème de batterie</label>
-          <label><input type="checkbox" name="problemes[]" value="moteur">Problème de moteur</label>
+          <label><input type="checkbox" name="problemes[]" value="batterie">Problème d'allumage</label>
+          <label><input type="checkbox" name="problemes[]" value="moteur">Problème de démarrage</label>
           <label><input type="checkbox" name="problemes[]" value="freinage">Problème de freinage</label>
           <label><input type="checkbox" name="problemes[]" value="panne">Panne électrique générale</label>
           <label><input type="checkbox" name="problemes[]" value="affichage">Affichage ou compteur défectueux</label>
           <label><input type="checkbox" name="problemes[]" value="chargeur">Problème avec le chargeur</label>
           <label><input type="checkbox" name="problemes[]" value="structure">Problème de coque ou structure</label>
-          <label><input type="checkbox" name="problemes[]" value="structure">Aucun problème</label>
+          <label><input type="checkbox" name="problemes[]" value="structure">Autre panne</label>
           <label>Description de la panne : <input type="text" name="probleme_autre"></label>
         </div>
       </fieldset>
@@ -268,10 +273,17 @@
         <legend>Type de demande</legend>
         <div class="checkbox-group">
           <label><input type="checkbox" name="demande" value="Reparation">Réparation de la moto</label>
-          <label><input type="checkbox" name="demande" value="Echange complet">Échange complet de la moto</label>
-          <label><input type="checkbox" name="demande" value="Batterie">Échange de la batterie</label>
-          <label><input type="checkbox" name="demande" value="Composant">Échange d’un autre composant</label>
+          <label><input type="checkbox" name="demande" value="Entretien">Entretien de la moto</label>
+          <label><input type="checkbox" name="demande" value="Achat composant">Achat d'un composant</label>
+          <label>Description du composant : <input type="text" name="description du composant"></label>
+
           <label><input type="checkbox" name="demande" value="Diagnostic">Simple diagnostic / vérification</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>NB :</legend>
+        <div class="justifie">
+          <p>Seule l'entreprise est habilitée à statuer sur le remplacement d’une moto ou d’un composant, sur la base du rapport technique et conformément aux conditions prévues dans le contrat de vente. Le client ne peut exiger un tel remplacement sans une recommandation ou une validation préalable de Centre technique d'étude et développement EHUMOTORS</p>
         </div>
       </fieldset>
 
